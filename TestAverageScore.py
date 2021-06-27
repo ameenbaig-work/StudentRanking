@@ -3,14 +3,18 @@ from AverageScore import *
 
 class TestAverageScore(unittest.TestCase):
 
-    def test__init__(self):
-        self.assertRaises(TypeError, AverageScore.__init__(-50, 60, 70), )
+    def test_validate_input_values(self):
+        self.assertRaises(ValueError, AverageScore.validate_input_values, self, -50, 60, 70)
 
     def test_calculate_avg_score(self):
         student_marks = AverageScore(50,60,70)
-        self.assertEquals(student_marks.calculate_avg_score(), 60, "Average Score Not Calculated Correctly")
-        self.assertAlmostEquals(student_marks.calculate_avg_score(), 60, 1, "Average Score Not Calculated Correctly")
-    #   self.assertNotEqual(student_marks.calculate_avg_score(),60,"")
+        self.assertAlmostEquals(student_marks.calculate_avg_score(), 60, 2, "Average Score Not Calculated Correctly")
+
+    def test_check_input_size(self):
+        self.assertRaises(ValueError, AverageScore.validate_input_size, self, 500, 60, 70)
+
+    def test_check_input_datatype(self):
+        self.assertRaises(ValueError, AverageScore.validate_input_datatype, self, "50", 60, 70)
 
 if __name__ == '__main__':
     unittest.main()
