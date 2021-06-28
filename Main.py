@@ -4,7 +4,7 @@ from ProgressScore import *
 # Loop responsible for taking input and calculating AverageScore and Average ProgressScore
 run = "Yes"
 while run == "Yes":
-    # Asks for input from user
+    # Ask for input from user
     student_code = str(input("Enter student code:"))
     mock_Maths_marks = int(input("Enter Mock result achieved in Maths:"))
     actual_Maths_marks = int(input("Enter Actual marks achieved in Maths:"))
@@ -24,5 +24,5 @@ while run == "Yes":
           "and their average progress score is", average_progress_score.calculate_avg_progress_score())
     print(" ")
     # Asks user to continue or end the loop
-    run = str(input("Go again? Yes/No: "))
+    run = str(input("Do you want to continue with another student? Yes/No: "))
     print(" ")
