@@ -6,12 +6,12 @@ run = "Yes"
 while run == "Yes":
     # Ask for input from user
     student_code = str(input("Enter student code:"))
-    mock_Maths_marks = int(input("Enter Mock result achieved in Maths:"))
-    actual_Maths_marks = int(input("Enter Actual marks achieved in Maths:"))
-    mock_English_marks = int(input("Enter Mock result achieved in English:"))
-    actual_English_marks = int(input("Enter Actual marks achieved in English:"))
-    mock_Science_marks = int(input("Enter Mock result achieved in Science:"))
-    actual_Science_marks = int(input("Enter Actual marks achieved in Science:"))
+    mock_Maths_marks = float(input("Enter Mock result achieved in Maths:"))
+    actual_Maths_marks = float(input("Enter Actual marks achieved in Maths:"))
+    mock_English_marks = float(input("Enter Mock result achieved in English:"))
+    actual_English_marks = float(input("Enter Actual marks achieved in English:"))
+    mock_Science_marks = float(input("Enter Mock result achieved in Science:"))
+    actual_Science_marks = float(input("Enter Actual marks achieved in Science:"))
 
     # Instantiation of AverageScore
     average_score = AverageScore(actual_Maths_marks, actual_English_marks, actual_Science_marks)
