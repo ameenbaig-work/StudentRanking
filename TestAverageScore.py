@@ -16,13 +16,13 @@ class TestAverageScore(unittest.TestCase):
         student_marks = AverageScore(88, 96, 54)
         self.assertAlmostEqual(student_marks.calculate_avg_score(), 79.33, 2, "Average Score Not Calculated Correctly")
 
-    # Method for checking if any of the properties exceed 100 marks
+    # Method for checking if any of the marks entered exceed 100 marks
     def test_check_input_size(self):
         # Instantiation of AverageScore
         student_marks = AverageScore(88, 96, 54)
         self.assertRaises(ValueError, student_marks.validate_input_size, 880, 96, 54)
 
-    # Method for checking if any of the properties are of datatype "string"
+    # Method for checking if any of the marks entered are of datatype "string"
     def test_check_input_datatype(self):
         self.assertRaises(ValueError, AverageScore.validate_input_datatype, self, "88", 96, 54)
 

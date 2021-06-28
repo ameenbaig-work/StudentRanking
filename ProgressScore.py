@@ -18,13 +18,13 @@ class ProgressScore:
         self.validate_input_size(mock_maths_marks, actual_maths_marks, mock_english_marks, actual_english_marks, mock_science_marks, actual_science_marks)
         self.validate_input_datatype(mock_maths_marks, actual_maths_marks, mock_english_marks, actual_english_marks, mock_science_marks, actual_science_marks)
 
-    # Raises an error if any of the properties are greater than 100
+    # Raises an error if any of the marks entered s are greater than 100
     def validate_input_size(self, mock_maths_marks, actual_maths_marks, mock_english_marks, actual_english_marks, mock_science_marks, actual_science_marks):
         if (mock_maths_marks > self.max_marks) or (actual_maths_marks > self.max_marks) or (mock_english_marks > self.max_marks) or \
                 (actual_english_marks > self.max_marks) or (mock_science_marks > self.max_marks) or (actual_science_marks > self.max_marks):
             raise ValueError("Scores cannot exceed 100 marks")
 
-    # Raises an error if any of the properties are a string
+    # Raises an error if any of the marks entered are a string
     def validate_input_datatype(self, mock_maths_marks, actual_maths_marks, mock_english_marks, actual_english_marks, mock_science_marks, actual_science_marks):
         if isinstance(mock_maths_marks,str) or isinstance(actual_maths_marks,str) or isinstance(mock_english_marks,str) \
                 or isinstance(actual_english_marks,str) or isinstance(mock_science_marks,str) or isinstance(actual_science_marks,str):

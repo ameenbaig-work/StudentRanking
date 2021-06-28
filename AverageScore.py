@@ -10,23 +10,23 @@ class AverageScore:
         self.english_marks = english_marks
         self.science_marks = science_marks
 
-    # Method for calling the three testing methods below
+    # Method for calling the three validation methods below
     def validate_input_values(self, maths_marks, english_marks, science_marks):
         self.validate_negative_input(maths_marks, english_marks, science_marks)
         self.validate_input_size(maths_marks, english_marks, science_marks)
         self.validate_input_datatype(maths_marks, english_marks, science_marks)
 
-    # Raises an error if any of the properties are negative
+    # Raises an error if any of the marks entered are negative
     def validate_negative_input(self, maths_marks, english_marks, science_marks):
         if (maths_marks < 0) or (english_marks < 0) or (science_marks < 0):
             raise ValueError("Only positive values are allowed")
 
-    # Raises an error if any of the properties are greater than 100
+    # Raises an error if any of the marks entered are greater than 100
     def validate_input_size(self, maths_marks, english_marks, science_marks):
         if (maths_marks > self.max_marks) or (english_marks > self.max_marks) or (science_marks > self.max_marks):
             raise ValueError("Scores cannot exceed 100 marks")
 
-    # Raises an error if any of the properties are a string
+    # Raises an error if any of the marks entered are a string
     def validate_input_datatype(self, maths_marks, english_marks, science_marks):
         if isinstance(maths_marks,str) or isinstance(english_marks,str) or isinstance(science_marks,str):
             raise ValueError("Input cannot be a string")
